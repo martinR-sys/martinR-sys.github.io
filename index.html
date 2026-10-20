@@ -19,6 +19,13 @@
   
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0a1730" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Makhi Mabogo" />
+  <style>.form-status{min-height:1.5em;margin-top:.75rem;font-size:.95rem;color:#d9a84e}</style>
 </head>
 <body>
 
@@ -61,6 +68,7 @@
       <a href="#resources" class="mobile-link">Resources</a>
       <a href="#deal-calculator" class="mobile-link">Deal Funding</a>
       <a href="#loan-programs" class="mobile-link">Loan Programs</a>
+      <a href="#upload" class="mobile-link">Upload Docs</a>
       <a href="#contact" class="btn btn-gold w-full text-center">Let's Build Together</a>
     </div>
   </header>
@@ -691,6 +699,44 @@
     </div>
   </section>
 
+  <!-- Borrower Document Upload Section -->
+  <section class="section upload-section" id="upload">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">BORROWER PORTAL</div>
+        <h2 class="section-title">Send Us Your <span class="gold-gradient-text">Documents.</span></h2>
+        <p class="section-desc">Already talking to us about a loan? Upload your application and supporting documents here — bank statements, ID, entity docs, property photos. They go straight to our intake team.</p>
+      </div>
+      <div class="contact-form-glass">
+        <form id="upload-form">
+          <label for="up-name">Your Full Name *</label>
+          <input type="text" id="up-name" name="name" class="form-input" placeholder="e.g. John Doe" required />
+          <label for="up-email">Email Address *</label>
+          <input type="email" id="up-email" name="email" class="form-input" placeholder="john@company.com" required />
+          <label for="up-phone">Phone Number</label>
+          <input type="tel" id="up-phone" name="phone" class="form-input" placeholder="(555) 000-0000" />
+          <label for="up-program">Loan Program</label>
+          <select id="up-program" name="program" class="form-input">
+            <option>FlexTerm</option>
+            <option>ARV Pro</option>
+            <option>Flex I/O</option>
+            <option>Fast50</option>
+            <option>90% CLTV</option>
+            <option>Super Jumbo</option>
+            <option>Assisted Living</option>
+            <option>Not sure yet</option>
+          </select>
+          <label for="up-files">Documents * (PDF or photos, up to 10 files)</label>
+          <input type="file" id="up-files" name="documents" class="form-input" multiple accept=".pdf,image/*,.doc,.docx" required />
+          <label for="up-notes">Notes</label>
+          <textarea id="up-notes" name="notes" class="form-input form-textarea" rows="3" placeholder="Anything we should know about these documents..."></textarea>
+          <button type="submit" class="btn btn-gold btn-large" id="upload-btn">Upload Documents</button>
+          <p class="form-status" id="upload-status" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- Knowledge Hub / Resources Section -->
   <section class="section resources-section" id="resources">
     <div class="container">
@@ -876,6 +922,7 @@
         <a href="#resources">Resources</a>
         <a href="#deal-calculator">Funding</a>
         <a href="#loan-programs">Loan Programs</a>
+        <a href="#upload">Upload Docs</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -884,6 +931,37 @@
     </div>
   </footer>
 
+  <script>
+  // PWA: register service worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function(){ navigator.serviceWorker.register('sw.js').catch(function(){}); });
+  }
+  // Borrower document upload
+  (function(){
+    // >>> PASTE YOUR FORMINIT FORM ENDPOINT HERE (free signup at forminit.com) <<<
+    var UPLOAD_ENDPOINT = "PASTE_YOUR_FORMINIT_ENDPOINT_HERE";
+    var form = document.getElementById('upload-form');
+    if (!form) return;
+    var status = document.getElementById('upload-status');
+    var btn = document.getElementById('upload-btn');
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      if (!UPLOAD_ENDPOINT || UPLOAD_ENDPOINT.indexOf('PASTE_YOUR') === 0) {
+        status.textContent = 'Online uploads are being connected — please email your files to makhimabogo@outlook.com for now.';
+        return;
+      }
+      var files = document.getElementById('up-files').files;
+      if (!files.length) { status.textContent = 'Please choose at least one file.'; return; }
+      btn.disabled = true; btn.textContent = 'Uploading...';
+      status.textContent = '';
+      fetch(UPLOAD_ENDPOINT, { method: 'POST', body: new FormData(form) })
+        .then(function(r){ if(!r.ok) throw new Error('upload failed'); })
+        .then(function(){ status.textContent = 'Documents received — we will be in touch shortly.'; form.reset(); })
+        .catch(function(){ status.textContent = "Upload didn't go through — please email your files to makhimabogo@outlook.com."; })
+        .then(function(){ btn.disabled = false; btn.textContent = 'Upload Documents'; });
+    });
+  })();
+  </script>
   <script src="app.js"></script>
 </body>
 </html>
