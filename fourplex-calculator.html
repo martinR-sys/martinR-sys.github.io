@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5% Down Fourplex Calculator — Makhi Mabogo &amp; Associates</title>
+<style>
+  :root { --navy:#0F2A44; --gold:#D9A84E; --ink:#1c2733; --muted:#5b6b7c; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Georgia,'Times New Roman',serif; background:#0b1c2e; color:#fff; }
+  .wrap { max-width:680px; margin:0 auto; padding:48px 24px 64px; }
+  .brand { color:var(--gold); letter-spacing:4px; font-size:13px; font-family:Arial,Helvetica,sans-serif; text-transform:uppercase; }
+  h1 { font-size:40px; margin:12px 0 8px; line-height:1.15; }
+  .sub { color:#cdd7e1; font-size:18px; line-height:1.55; margin:0 0 6px; }
+  .rule { border-left:3px solid var(--gold); padding:14px 18px; margin:24px 0 30px; background:rgba(217,168,78,.08); line-height:1.6; }
+  .rule h2 { font-family:Arial,Helvetica,sans-serif; font-size:14px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin:0 0 10px; }
+  .rule ul { margin:0; padding-left:20px; color:#e8edf2; }
+  .rule li { margin:6px 0; }
+  .card { background:#fff; color:var(--ink); border-radius:10px; padding:28px 26px; }
+  .card h2 { font-family:Arial,Helvetica,sans-serif; font-size:14px; letter-spacing:2px; text-transform:uppercase; color:var(--navy); margin:0 0 6px; }
+  label { display:block; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:bold; text-transform:uppercase; letter-spacing:1px; color:var(--navy); margin:18px 0 6px; }
+  label:first-child { margin-top:0; }
+  input { width:100%; padding:12px; font-size:16px; border:1px solid #c4cfd9; border-radius:6px; font-family:Arial,Helvetica,sans-serif; }
+  .hint { font-family:Arial,Helvetica,sans-serif; font-size:12.5px; color:var(--muted); margin:5px 0 0; line-height:1.5; }
+  button { margin-top:24px; width:100%; background:var(--navy); color:#fff; border:none; border-radius:6px; padding:16px; font-size:18px; font-family:Arial,Helvetica,sans-serif; font-weight:bold; letter-spacing:1px; cursor:pointer; }
+  button:hover { background:#1a3a5c; }
+  .results { margin-top:28px; border-top:2px solid var(--gold); padding-top:20px; }
+  .row { display:flex; justify-content:space-between; gap:16px; padding:11px 2px; border-bottom:1px solid #e3e9ee; font-family:Arial,Helvetica,sans-serif; }
+  .row span:first-child { color:var(--ink); }
+  .row span:last-child { font-weight:bold; color:var(--navy); white-space:nowrap; }
+  .row.net { background:var(--navy); margin:12px -8px 0; padding:14px 10px; border-bottom:none; border-radius:6px; }
+  .row.net span:first-child { color:#fff; font-weight:bold; }
+  .row.net span:last-child { color:var(--gold); font-size:19px; }
+  .fine { font-family:Arial,Helvetica,sans-serif; font-size:13px; color:var(--muted); margin-top:16px; line-height:1.6; }
+  .lead { margin-top:30px; }
+  .lead p { font-family:Arial,Helvetica,sans-serif; font-size:14px; color:var(--muted); line-height:1.6; margin:0 0 4px; }
+  .thanks { display:none; background:#0f3d24; border:1px solid #2e7d4f; border-radius:8px; padding:20px; margin-bottom:24px; line-height:1.6; }
+  .foot { text-align:center; color:#8fa1b3; font-family:Arial,Helvetica,sans-serif; font-size:13px; margin-top:28px; line-height:1.8; }
+  .foot a { color:var(--gold); text-decoration:none; }
+  .disclosure { font-family:Arial,Helvetica,sans-serif; font-size:11.5px; color:#6d7f90; text-align:center; line-height:1.7; margin-top:18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">Makhi Mabogo &amp; Associates</div>
+  <h1>5% Down Fourplex Calculator</h1>
+  <p class="sub">Run your own numbers on the Fannie Mae 5% down plan. Owner-occupant, 2 to 4 units. Facts only &mdash; no advice, no quote.</p>
+
+  <div class="rule">
+    <h2>The rule, in plain words</h2>
+    <ul>
+      <li><strong>5% down.</strong> Owner-occupant on a 2- to 4-unit building. Before November 2023 it was 15% on a duplex and 25% on a 3- or 4-unit building.</li>
+      <li><strong>75% of the rent counts.</strong> The lender counts 75% of the market rent on the units you do not live in. The other 25% is held for vacancies and upkeep.</li>
+      <li><strong>6 months of reserves.</strong> After closing, 6 months of the full monthly payment must be in the bank. Gift money cannot cover reserves.</li>
+      <li><strong>PMI below 20% down.</strong> Required by the lender and removed once the loan balance reaches 80% of the home&rsquo;s value.</li>
+      <li><strong>Move in within 60 days.</strong> 2026 conforming limit on a 4-unit building: $1,601,750.</li>
+    </ul>
+  </div>
+
+  <div class="thanks" id="thanks">Thank you &mdash; your numbers are on their way. We review every message personally and will reach out shortly. Nothing you shared leaves this office.</div>
+
+  <div class="card">
+    <h2>Your numbers</h2>
+
+    <label for="price">Purchase price ($)</label>
+    <input id="price" type="number" min="0" step="1000" value="139000">
+    <p class="hint">Prefilled with the guide&rsquo;s worked example: 4914-16 N Rampart St, New Orleans, $139,000.</p>
+
+    <label for="downPct">Down payment (%)</label>
+    <input id="downPct" type="number" min="0" max="100" step="0.5" value="5">
+    <p class="hint">The Fannie Mae 5% down plan: 5% for an owner-occupant on a 2- to 4-unit building.</p>
+
+    <label for="rate">Interest rate (%, your own rate)</label>
+    <input id="rate" type="number" min="0" max="30" step="0.01" value="7.18">
+    <p class="hint">Prefilled with the Freddie Mac national average, week ending November 5, 2026. Enter your own rate &mdash; this is not a quote.</p>
+
+    <label for="tax">Property tax ($ per month)</label>
+    <input id="tax" type="number" min="0" step="5" value="75">
+    <p class="hint">Guide example: about $75 a month with the homestead exemption.</p>
+
+    <label for="ins">Homeowner&rsquo;s insurance ($ per month)</label>
+    <input id="ins" type="number" min="0" step="5" value="250">
+    <p class="hint">Guide example: about $250 a month. Get a real quote.</p>
+
+    <label for="rent">Monthly rent, units you will not live in ($)</label>
+    <input id="rent" type="number" min="0" step="25" value="950">
+    <p class="hint">The lender counts 75% of the market rent on the units you do not live in. Rent figures come from the appraiser.</p>
+
+    <button type="button" id="calcBtn">Calculate</button>
+
+    <div class="results" id="results">
+      <div class="row"><span>Down payment</span><span id="outDown">&mdash;</span></div>
+      <div class="row"><span>Loan amount</span><span id="outLoan">&mdash;</span></div>
+      <div class="row"><span>Principal and interest, per month</span><span id="outPI">&mdash;</span></div>
+      <div class="row"><span>Total monthly payment (principal, interest, tax, insurance)</span><span id="outTotal">&mdash;</span></div>
+      <div class="row"><span>Reserves needed (6 months)</span><span id="outReserves">&mdash;</span></div>
+      <div class="row"><span>Rental offset (75% of rents)</span><span id="outOffset">&mdash;</span></div>
+      <div class="row net"><span>Net monthly cost after rental offset</span><span id="outNet">&mdash;</span></div>
+    </div>
+
+    <p class="fine">Estimate only. PMI is required below 20% down and is not included here &mdash; the lender sets it. In the guide&rsquo;s example it was $55&ndash;$110 a month. Rates, program terms, and listing prices change. Confirm every number with the lender. This is not financial advice.</p>
+  </div>
+
+  <div class="card lead">
+    <h2>Get your numbers in writing</h2>
+    <p>Send your name and email. We will send your calculated numbers back and answer one question about the plan. Your information is never shared or sold.</p>
+    <form action="https://formsubmit.co/info@makhimabogo.com" method="POST">
+      <input type="hidden" name="_subject" value="5% Down Fourplex Calculator — makhimabogo.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://makhimabogo.com/fourplex-calculator.html?sent=1">
+      <input type="hidden" name="calculator_summary" id="calcSummary" value="">
+      <input type="text" name="_honey" style="display:none">
+
+      <label for="name">Full name *</label>
+      <input id="name" name="name" type="text" required autocomplete="name">
+
+      <label for="email">Email *</label>
+      <input id="email" name="email" type="email" required autocomplete="email">
+
+      <button type="submit">Send me my numbers</button>
+      <p class="fine">By sending, you agree to be contacted about your numbers. We never share or sell your information. No obligation, ever.</p>
+    </form>
+  </div>
+
+  <div class="foot">
+    Developing land. Protecting legacies.<br>
+    <a href="https://makhimabogo.com">makhimabogo.com</a> &nbsp;|&nbsp; <a href="mailto:info@makhimabogo.com">info@makhimabogo.com</a>
+  </div>
+  <p class="disclosure">Makhi Mabogo &amp; Associates, Houston, TX &middot; Equal Housing Opportunity. Makhi Mabogo &amp; Associates is a mortgage broker; loans are made by third-party lending partners (NMLS #1717954) and are disclosed on closing documents. This is not a commitment to lend. All loans subject to credit and underwriting approval. Terms and conditions apply; programs subject to change.</p>
+</div>
+<script>
+function calcFourplex(price, downPct, rate, tax, ins, rent) {
+  var down = price * downPct / 100;
+  var loan = price - down;
+  var r = rate / 100 / 12;
+  var n = 360;
+  var pi = (r > 0) ? loan * r / (1 - Math.pow(1 + r, -n)) : loan / n;
+  var total = pi + tax + ins;
+  var reserves = 6 * total;
+  var offset = 0.75 * rent;
+  var net = total - offset;
+  return { down: down, loan: loan, pi: pi, total: total, reserves: reserves, offset: offset, net: net };
+}
+
+function fmt(v) {
+  return '$' + Math.round(v).toLocaleString('en-US');
+}
+
+if (typeof document !== 'undefined') {
+  var ids = ['price', 'downPct', 'rate', 'tax', 'ins', 'rent'];
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) || v < 0 ? 0 : v;
+  }
+  function runCalc() {
+    var price = num('price');
+    var downPct = Math.min(100, num('downPct'));
+    var rate = num('rate');
+    var tax = num('tax');
+    var ins = num('ins');
+    var rent = num('rent');
+    var out = calcFourplex(price, downPct, rate, tax, ins, rent);
+    document.getElementById('outDown').textContent = fmt(out.down);
+    document.getElementById('outLoan').textContent = fmt(out.loan);
+    document.getElementById('outPI').textContent = fmt(out.pi);
+    document.getElementById('outTotal').textContent = fmt(out.total);
+    document.getElementById('outReserves').textContent = fmt(out.reserves);
+    document.getElementById('outOffset').textContent = fmt(out.offset);
+    document.getElementById('outNet').textContent = fmt(out.net);
+    document.getElementById('calcSummary').value =
+      'Price $' + Math.round(price).toLocaleString('en-US') +
+      ' | Down ' + downPct + '% = ' + fmt(out.down) +
+      ' | Loan ' + fmt(out.loan) +
+      ' | Rate ' + rate + '%' +
+      ' | P&I ' + fmt(out.pi) + '/mo' +
+      ' | Total ' + fmt(out.total) + '/mo' +
+      ' | Reserves ' + fmt(out.reserves) +
+      ' | Rental offset ' + fmt(out.offset) + '/mo' +
+      ' | Net ' + fmt(out.net) + '/mo';
+  }
+  document.getElementById('calcBtn').addEventListener('click', runCalc);
+  ids.forEach(function (id) {
+    document.getElementById(id).addEventListener('input', runCalc);
+  });
+  runCalc();
+  if (new URLSearchParams(location.search).get('sent') === '1') {
+    document.getElementById('thanks').style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+}
+</script>
+</body>
+</html>
