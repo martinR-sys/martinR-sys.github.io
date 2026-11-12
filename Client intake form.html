@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Intake — Construction Financing | Makhi Mabogo &amp; Associates</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0d1b2a; color: #e8e6de; font-family: Georgia, 'Times New Roman', serif; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 18px 60px; }
+  header { border-bottom: 2px solid #d4af37; padding-bottom: 14px; margin-bottom: 22px; }
+  header .brand { color: #d4af37; font-size: 22px; letter-spacing: 1px; font-weight: bold; }
+  header .sub { color: #a5afb9; font-size: 14px; margin-top: 4px; }
+  h1 { font-size: 26px; color: #d4af37; margin: 0 0 6px; }
+  .intro { color: #e8e6de; font-size: 16px; line-height: 1.55; margin: 0 0 22px; }
+  .intro b { color: #d4af37; }
+  fieldset { border: 1px solid #2a3f55; border-radius: 8px; padding: 18px; margin: 0 0 20px; background: #122539; }
+  legend { color: #d4af37; font-size: 17px; font-weight: bold; padding: 0 8px; }
+  label { display: block; font-size: 14px; color: #c8cdd4; margin: 14px 0 5px; }
+  label:first-of-type { margin-top: 2px; }
+  input[type=text], input[type=tel], input[type=email], input[type=number], input[type=date], select, textarea {
+    width: 100%; padding: 10px 12px; font-size: 15px; color: #e8e6de;
+    background: #0d1b2a; border: 1px solid #3a5068; border-radius: 6px; font-family: inherit;
+  }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: #d4af37; }
+  textarea { min-height: 80px; resize: vertical; }
+  .row { display: flex; gap: 14px; }
+  .row > div { flex: 1; min-width: 0; }
+  .hint { font-size: 13px; color: #a5afb9; margin-top: 4px; }
+  .check { display: flex; gap: 10px; align-items: flex-start; margin: 6px 0; }
+  .check input { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; }
+  .check span { font-size: 14px; color: #c8cdd4; line-height: 1.5; }
+  button { display: block; width: 100%; padding: 15px; font-size: 18px; font-weight: bold;
+    color: #0d1b2a; background: #d4af37; border: none; border-radius: 8px; cursor: pointer; margin-top: 8px; }
+  button:hover { background: #e0bd4a; }
+  footer { text-align: center; color: #a5afb9; font-size: 13px; margin-top: 26px; line-height: 1.6; }
+  footer a { color: #d4af37; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand">MAKHI MABOGO &amp; ASSOCIATES</div>
+  <div class="sub">makhimabogo.com &nbsp;|&nbsp; info@makhimabogo.com &nbsp;|&nbsp; Houston, TX</div>
+</header>
+
+<h1>Client Intake — Construction Financing</h1>
+<p class="intro">Complete this form so we can <b>evaluate your project</b> and prepare your loan application and scenario for the bank. Everything you share is held in confidence and used only to place your financing. Fields marked * are required.</p>
+
+<form action="https://formsubmit.co/info@makhimabogo.com" method="POST">
+  <input type="hidden" name="_subject" value="New Client Intake — Construction Financing">
+  <input type="hidden" name="_template" value="table">
+
+  <fieldset>
+    <legend>1. About you</legend>
+    <label for="full_name">Full name *</label>
+    <input type="text" id="full_name" name="full_name" required>
+    <div class="row">
+      <div>
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div>
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    </div>
+    <label for="mailing_address">Mailing address</label>
+    <input type="text" id="mailing_address" name="mailing_address">
+  </fieldset>
+
+  <fieldset>
+    <legend>2. Your company / entity</legend>
+    <div class="row">
+      <div>
+        <label for="entity_name">Entity name (LLC / company)</label>
+        <input type="text" id="entity_name" name="entity_name">
+      </div>
+      <div>
+        <label for="entity_type">Entity type</label>
+        <select id="entity_type" name="entity_type">
+          <option value="">Select…</option>
+          <option>LLC</option>
+          <option>Corporation</option>
+          <option>Sole Proprietor</option>
+          <option>Trust</option>
+          <option>Partnership</option>
+          <option>Not formed yet</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="entity_state">State of formation</label>
+        <input type="text" id="entity_state" name="entity_state">
+      </div>
+      <div>
+        <label for="entity_formed">Year formed</label>
+        <input type="text" id="entity_formed" name="entity_formed">
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>3. Your lots</legend>
+    <label for="lots_count">How many lots do you own? *</label>
+    <input type="number" id="lots_count" name="lots_count" min="1" required>
+    <p class="hint">List up to three lots below. Use the notes box at the end for any additional lots.</p>
+    <label for="lot_1_address">Lot 1 — Address *</label>
+    <input type="text" id="lot_1_address" name="lot_1_address" required>
+    <div class="row">
+      <div>
+        <label for="lot_1_size">Lot 1 — Size (sq ft / dimensions)</label>
+        <input type="text" id="lot_1_size" name="lot_1_size">
+      </div>
+      <div>
+        <label for="lot_1_ownership">Lot 1 — Ownership</label>
+        <select id="lot_1_ownership" name="lot_1_ownership">
+          <option value="">Select…</option>
+          <option>Owned free and clear</option>
+          <option>Has a mortgage / lien</option>
+          <option>Under contract to buy</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <label for="lot_2_address">Lot 2 — Address</label>
+    <input type="text" id="lot_2_address" name="lot_2_address">
+    <div class="row">
+      <div>
+        <label for="lot_2_size">Lot 2 — Size (sq ft / dimensions)</label>
+        <input type="text" id="lot_2_size" name="lot_2_size">
+      </div>
+      <div>
+        <label for="lot_2_ownership">Lot 2 — Ownership</label>
+        <select id="lot_2_ownership" name="lot_2_ownership">
+          <option value="">Select…</option>
+          <option>Owned free and clear</option>
+          <option>Has a mortgage / lien</option>
+          <option>Under contract to buy</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <label for="lot_3_address">Lot 3 — Address</label>
+    <input type="text" id="lot_3_address" name="lot_3_address">
+    <div class="row">
+      <div>
+        <label for="lot_3_size">Lot 3 — Size (sq ft / dimensions)</label>
+        <input type="text" id="lot_3_size" name="lot_3_size">
+      </div>
+      <div>
+        <label for="lot_3_ownership">Lot 3 — Ownership</label>
+        <select id="lot_3_ownership" name="lot_3_ownership">
+          <option value="">Select…</option>
+          <option>Owned free and clear</option>
+          <option>Has a mortgage / lien</option>
+          <option>Under contract to buy</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <label for="additional_lots">Additional lots (addresses, sizes, ownership)</label>
+    <textarea id="additional_lots" name="additional_lots"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>4. The project</legend>
+    <div class="row">
+      <div>
+        <label for="project_type">What do you want to build? *</label>
+        <select id="project_type" name="project_type" required>
+          <option value="">Select…</option>
+          <option>Duplex (2 units)</option>
+          <option>Triplex (3 units)</option>
+          <option>Fourplex (4 units)</option>
+          <option>Single-family home</option>
+          <option>Multifamily (5+ units)</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="units">Number of units</label>
+        <input type="number" id="units" name="units" min="1">
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="living_sqft">Living area (sq ft)</label>
+        <input type="text" id="living_sqft" name="living_sqft">
+      </div>
+      <div>
+        <label for="stories">Stories</label>
+        <input type="number" id="stories" name="stories" min="1">
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="construction_type">Construction type</label>
+        <select id="construction_type" name="construction_type">
+          <option value="">Select…</option>
+          <option>New ground-up construction</option>
+          <option>Major renovation / rehab</option>
+          <option>Addition</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="plans_status">Plans status</label>
+        <select id="plans_status" name="plans_status">
+          <option value="">Select…</option>
+          <option>Plans complete</option>
+          <option>Plans in progress</option>
+          <option>No plans yet</option>
+        </select>
+      </div>
+    </div>
+    <label for="architect">Architect / designer (if any)</label>
+    <input type="text" id="architect" name="architect">
+    <label for="permit_status">Permit status</label>
+    <select id="permit_status" name="permit_status">
+      <option value="">Select…</option>
+      <option>Permit issued</option>
+      <option>Permit applied for</option>
+      <option>Not applied yet</option>
+      <option>Not sure</option>
+    </select>
+    <div class="row">
+      <div>
+        <label for="est_budget">Estimated construction budget</label>
+        <input type="text" id="est_budget" name="est_budget" placeholder="$">
+      </div>
+      <div>
+        <label for="timeline">When do you want to start?</label>
+        <select id="timeline" name="timeline">
+          <option value="">Select…</option>
+          <option>Ready now</option>
+          <option>1–3 months</option>
+          <option>3–6 months</option>
+          <option>6+ months</option>
+        </select>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>5. General contractor</legend>
+    <label for="gc_status">Do you have a GC?</label>
+    <select id="gc_status" name="gc_status">
+      <option value="">Select…</option>
+      <option>GC selected</option>
+      <option>GC candidates in mind</option>
+      <option>No GC yet — need one</option>
+    </select>
+    <label for="gc_name">GC name / company</label>
+    <input type="text" id="gc_name" name="gc_name">
+    <label for="gc_license">GC license number / state</label>
+    <input type="text" id="gc_license" name="gc_license">
+    <label for="gc_experience">GC's similar projects completed (number / brief description)</label>
+    <textarea id="gc_experience" name="gc_experience"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>6. Financial picture</legend>
+    <div class="row">
+      <div>
+        <label for="credit_range">Credit score range</label>
+        <select id="credit_range" name="credit_range">
+          <option value="">Select…</option>
+          <option>750+</option>
+          <option>700–749</option>
+          <option>680–699</option>
+          <option>650–679</option>
+          <option>Below 650</option>
+          <option>Prefer not to say</option>
+        </select>
+      </div>
+      <div>
+        <label for="liquid_reserves">Cash / liquid reserves available</label>
+        <input type="text" id="liquid_reserves" name="liquid_reserves" placeholder="$">
+      </div>
+    </div>
+    <label for="tax_returns">Do you file tax returns?</label>
+    <select id="tax_returns" name="tax_returns">
+      <option value="">Select…</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+    <label for="other_assets">Other assets (property, investments, equipment)</label>
+    <textarea id="other_assets" name="other_assets"></textarea>
+    <label for="monthly_debt">Monthly debt payments (total)</label>
+    <input type="text" id="monthly_debt" name="monthly_debt" placeholder="$">
+  </fieldset>
+
+  <fieldset>
+    <legend>7. Exit plan &amp; funding</legend>
+    <label for="exit_strategy">What happens when construction is finished?</label>
+    <select id="exit_strategy" name="exit_strategy">
+      <option value="">Select…</option>
+      <option>Rent it out and hold</option>
+      <option>Sell it</option>
+      <option>Move in / owner-occupy</option>
+      <option>Undecided</option>
+    </select>
+    <div class="row">
+      <div>
+        <label for="expected_rent">Expected monthly rent (if renting)</label>
+        <input type="text" id="expected_rent" name="expected_rent" placeholder="$">
+      </div>
+      <div>
+        <label for="expected_sale_value">Expected sale value (if selling)</label>
+        <input type="text" id="expected_sale_value" name="expected_sale_value" placeholder="$">
+      </div>
+    </div>
+    <label for="loan_amount">Loan amount you are seeking</label>
+    <input type="text" id="loan_amount" name="loan_amount" placeholder="$ — leave blank and we will determine it">
+    <label for="equity_available">Cash you can put toward the project</label>
+    <input type="text" id="equity_available" name="equity_available" placeholder="$">
+    <label for="prior_denial">Have you been turned down for a construction loan before?</label>
+    <select id="prior_denial" name="prior_denial">
+      <option value="">Select…</option>
+      <option>No</option>
+      <option>Yes</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>8. Anything else</legend>
+    <label for="notes">Notes — anything else we should know (other lots, partners, timing, concerns)</label>
+    <textarea id="notes" name="notes"></textarea>
+    <label class="check">
+      <input type="checkbox" name="consent" value="yes" required>
+      <span>I authorize Makhi Mabogo &amp; Associates to use this information to evaluate financing options and share it with potential lenders on my behalf. *</span>
+    </label>
+  </fieldset>
+
+  <button type="submit">Send Intake Form</button>
+</form>
+
+<footer>
+  Makhi Mabogo &amp; Associates — Developing land. Protecting legacies.<br>
+  <a href="https://makhimabogo.com">makhimabogo.com</a> &nbsp;|&nbsp; <a href="mailto:info@makhimabogo.com">info@makhimabogo.com</a>
+</footer>
+</div>
+</body>
+</html>
