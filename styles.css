@@ -1226,6 +1226,12 @@ html { overflow-x: hidden; }
 }
 @media (max-width: 768px) {
   .mobile-menu { padding: 10px 24px 24px; gap: 0; }
+  /* Menu is taller than a phone screen: let it scroll so the bottom items (Application, Upload Docs) are reachable */
+  .mobile-menu {
+    max-height: calc(100vh - 90px);
+    max-height: calc(100dvh - 90px);
+    overflow-y: auto;
+  }
   .mobile-link {
     display: block;
     padding: 14px 0;
