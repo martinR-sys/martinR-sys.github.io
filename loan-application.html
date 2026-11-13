@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Application — Apply Online | Makhi Mabogo &amp; Associates</title>
+<style>
+  * { box-sizing: border-box; }
+  html { overflow-x: hidden; }
+  body { margin: 0; background: #0d1b2a; color: #e8e6de; font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; overflow-x: hidden; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 18px 60px; }
+  header { border-bottom: 2px solid #d4af37; padding-bottom: 14px; margin-bottom: 22px; }
+  header .brand { color: #d4af37; font-size: 22px; letter-spacing: 1px; font-weight: bold; }
+  header .brand a { color: #d4af37; text-decoration: none; }
+  header .sub { color: #a5afb9; font-size: 14px; margin-top: 4px; }
+  h1 { font-size: 26px; color: #d4af37; margin: 0 0 6px; }
+  .intro { font-size: 16px; margin: 0 0 22px; }
+  .intro b { color: #d4af37; }
+  .paper-box { border: 1px solid #d4af37; border-radius: 8px; padding: 16px 18px; margin: 0 0 22px; background: #122539; }
+  .paper-box p { margin: 0 0 12px; font-size: 15px; }
+  .paper-box p:last-child { margin-bottom: 0; }
+  .btn { display: inline-block; padding: 12px 22px; font-size: 16px; font-weight: bold; text-decoration: none; border-radius: 8px; }
+  .btn-outline { color: #d4af37; border: 1px solid #d4af37; background: transparent; }
+  fieldset { border: 1px solid #2a3f55; border-radius: 8px; padding: 18px; margin: 0 0 20px; background: #122539; }
+  legend { color: #d4af37; font-size: 17px; font-weight: bold; padding: 0 8px; }
+  label { display: block; font-size: 14px; color: #c8cdd4; margin: 14px 0 5px; }
+  label:first-of-type { margin-top: 2px; }
+  input[type=text], input[type=tel], input[type=email], input[type=number], input[type=date], select, textarea {
+    width: 100%; padding: 10px 12px; font-size: 15px; color: #e8e6de;
+    background: #0d1b2a; border: 1px solid #3a5068; border-radius: 6px; font-family: inherit;
+  }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: #d4af37; }
+  textarea { min-height: 80px; resize: vertical; }
+  .row { display: flex; gap: 14px; }
+  .row > div { flex: 1; min-width: 0; }
+  @media (max-width: 560px) { .row { flex-direction: column; gap: 0; } }
+  .hint { font-size: 13px; color: #a5afb9; margin-top: 4px; }
+  .check { display: flex; gap: 10px; align-items: flex-start; margin: 6px 0; }
+  .check input { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; }
+  .check span { font-size: 14px; color: #c8cdd4; line-height: 1.5; }
+  button[type=submit] { display: block; width: 100%; padding: 15px; font-size: 18px; font-weight: bold;
+    color: #0d1b2a; background: #d4af37; border: none; border-radius: 8px; cursor: pointer; margin-top: 8px; }
+  button[type=submit]:hover { background: #e0bd4a; }
+  footer { text-align: center; color: #a5afb9; font-size: 13px; margin-top: 26px; line-height: 1.6; }
+  footer a { color: #d4af37; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand"><a href="https://makhimabogo.com">MAKHI MABOGO &amp; ASSOCIATES</a></div>
+  <div class="sub">makhimabogo.com &nbsp;|&nbsp; info@makhimabogo.com &nbsp;|&nbsp; Houston, TX</div>
+</header>
+
+<h1>Commercial Loan Application</h1>
+<p class="intro">Fill it out right here — it comes straight to us and we take it from there. Fields marked * are required.</p>
+
+<div class="paper-box">
+  <p><b>Prefer pen and paper?</b> Download the same application as a PDF, print it, fill it out by hand, and email it to <a href="mailto:info@makhimabogo.com" style="color:#d4af37;">info@makhimabogo.com</a>.</p>
+  <p><a href="assets/loan-application.pdf" class="btn btn-outline" download>Download Loan Application (PDF)</a></p>
+</div>
+
+<form action="https://formsubmit.co/info@makhimabogo.com" method="POST">
+  <input type="hidden" name="_subject" value="New Loan Application — Online">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://makhimabogo.com/">
+  <input type="text" name="_honey" style="display:none">
+
+  <fieldset>
+    <legend>1. Financing request</legend>
+    <div class="row">
+      <div>
+        <label for="loan_amount">Requested loan amount *</label>
+        <input type="text" id="loan_amount" name="loan_amount" placeholder="$" required>
+      </div>
+      <div>
+        <label for="property_value">Property value</label>
+        <input type="text" id="property_value" name="property_value" placeholder="$">
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="loan_purpose">Purpose of loan *</label>
+        <select id="loan_purpose" name="loan_purpose" required>
+          <option value="">Select…</option>
+          <option>Purchase</option>
+          <option>Refinance</option>
+        </select>
+      </div>
+      <div>
+        <label for="loan_type">Type of loan</label>
+        <select id="loan_type" name="loan_type">
+          <option value="">Select…</option>
+          <option>FlexTerm</option>
+          <option>ARV Pro</option>
+          <option>Flex I/O</option>
+          <option>Fast50</option>
+          <option>Not sure — help me choose</option>
+        </select>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>2. Property information</legend>
+    <label for="property_type">Property type *</label>
+    <select id="property_type" name="property_type" required>
+      <option value="">Select…</option>
+      <option>1-4 Residential Units</option>
+      <option>5+ Residential Units</option>
+      <option>Mixed Use</option>
+      <option>Retail</option>
+      <option>Warehouse</option>
+      <option>Office</option>
+      <option>Auto Service</option>
+      <option>Other</option>
+    </select>
+    <label for="subject_street">Subject property — Street *</label>
+    <input type="text" id="subject_street" name="subject_street" required>
+    <div class="row">
+      <div>
+        <label for="subject_city">City *</label>
+        <input type="text" id="subject_city" name="subject_city" required>
+      </div>
+      <div>
+        <label for="subject_state">State *</label>
+        <input type="text" id="subject_state" name="subject_state" required>
+      </div>
+      <div>
+        <label for="subject_zip">Zip code *</label>
+        <input type="text" id="subject_zip" name="subject_zip" required>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="units">Number of units</label>
+        <input type="number" id="units" name="units" min="1">
+      </div>
+      <div>
+        <label for="entity_held">Will title be held in an entity?</label>
+        <select id="entity_held" name="entity_held">
+          <option value="">Select…</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+    </div>
+    <label for="entity_name">If yes, entity name</label>
+    <input type="text" id="entity_name" name="entity_name">
+    <div class="row">
+      <div>
+        <label for="year_acquired">Year acquired</label>
+        <input type="text" id="year_acquired" name="year_acquired">
+      </div>
+      <div>
+        <label for="acq_cost">Cost</label>
+        <input type="text" id="acq_cost" name="acq_cost" placeholder="$">
+      </div>
+      <div>
+        <label for="improvements">Improvements</label>
+        <select id="improvements" name="improvements">
+          <option value="">Select…</option>
+          <option>Made</option>
+          <option>To be made</option>
+          <option>Both</option>
+          <option>None</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="purchase_price">Purchase price</label>
+        <input type="text" id="purchase_price" name="purchase_price" placeholder="$">
+      </div>
+      <div>
+        <label for="fix_flip">Fix / flip or renovation?</label>
+        <select id="fix_flip" name="fix_flip">
+          <option value="">Select…</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+      <div>
+        <label for="arv">ARV (after-repair value)</label>
+        <input type="text" id="arv" name="arv" placeholder="$">
+      </div>
+    </div>
+    <label for="occupy_14">Do you intend to live in the subject property more than 14 days per year?</label>
+    <select id="occupy_14" name="occupy_14">
+      <option value="">Select…</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+    <label for="refi_balance">Current mortgage balance (if refinancing)</label>
+    <input type="text" id="refi_balance" name="refi_balance" placeholder="$">
+  </fieldset>
+
+  <fieldset>
+    <legend>3. Applicant information</legend>
+    <div class="row">
+      <div>
+        <label for="app_name">Applicant's name *</label>
+        <input type="text" id="app_name" name="app_name" required>
+      </div>
+      <div>
+        <label for="app_fico">FICO score</label>
+        <input type="text" id="app_fico" name="app_fico">
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="app_email">Applicant's email *</label>
+        <input type="email" id="app_email" name="app_email" required>
+      </div>
+      <div>
+        <label for="app_phone">Phone number *</label>
+        <input type="tel" id="app_phone" name="app_phone" required>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="app_dob">Date of birth</label>
+        <input type="date" id="app_dob" name="app_dob">
+      </div>
+      <div>
+        <label for="app_ssn4">Last 4 of SSN</label>
+        <input type="text" id="app_ssn4" name="app_ssn4" maxlength="4" inputmode="numeric" placeholder="Last 4 only">
+      </div>
+    </div>
+    <p class="hint">For your protection, this online form collects only the last 4 of your SSN. Your full SSN is collected securely by the lender during processing.</p>
+    <div class="row">
+      <div>
+        <label for="app_marital">Marital status</label>
+        <select id="app_marital" name="app_marital">
+          <option value="">Select…</option>
+          <option>Married</option>
+          <option>Unmarried</option>
+        </select>
+      </div>
+      <div>
+        <label for="app_residency">Residency status</label>
+        <select id="app_residency" name="app_residency">
+          <option value="">Select…</option>
+          <option>US Citizen</option>
+          <option>Permanent Resident Alien</option>
+          <option>Non-permanent Resident Alien</option>
+        </select>
+      </div>
+    </div>
+    <label for="app_address">Primary residence (street, city, state, zip)</label>
+    <input type="text" id="app_address" name="app_address">
+    <div class="row">
+      <div>
+        <label for="app_housing">Own or rent?</label>
+        <select id="app_housing" name="app_housing">
+          <option value="">Select…</option>
+          <option>Own</option>
+          <option>Rent</option>
+        </select>
+      </div>
+      <div>
+        <label for="app_years">Number of years there</label>
+        <input type="number" id="app_years" name="app_years" min="0">
+      </div>
+    </div>
+    <label for="co_name">Co-applicant's name (if any)</label>
+    <input type="text" id="co_name" name="co_name">
+    <div class="row">
+      <div>
+        <label for="co_fico">Co-applicant FICO</label>
+        <input type="text" id="co_fico" name="co_fico">
+      </div>
+      <div>
+        <label for="co_email">Co-applicant's email</label>
+        <input type="email" id="co_email" name="co_email">
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="co_phone">Co-applicant phone</label>
+        <input type="tel" id="co_phone" name="co_phone">
+      </div>
+      <div>
+        <label for="co_dob">Co-applicant date of birth</label>
+        <input type="date" id="co_dob" name="co_dob">
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="co_ssn4">Co-applicant last 4 of SSN</label>
+        <input type="text" id="co_ssn4" name="co_ssn4" maxlength="4" inputmode="numeric" placeholder="Last 4 only">
+      </div>
+      <div>
+        <label for="co_marital">Co-applicant marital status</label>
+        <select id="co_marital" name="co_marital">
+          <option value="">Select…</option>
+          <option>Married</option>
+          <option>Unmarried</option>
+        </select>
+      </div>
+    </div>
+    <label for="co_occupy_14">Does co-applicant intend to live in the subject property more than 14 days per year?</label>
+    <select id="co_occupy_14" name="co_occupy_14">
+      <option value="">Select…</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>4. Employment information</legend>
+    <div class="row">
+      <div>
+        <label for="emp_name">Employer's name</label>
+        <input type="text" id="emp_name" name="emp_name">
+      </div>
+      <div>
+        <label for="emp_years">Years on job</label>
+        <input type="text" id="emp_years" name="emp_years">
+      </div>
+    </div>
+    <label for="emp_address">Employer address (street, city, state, zip)</label>
+    <input type="text" id="emp_address" name="emp_address">
+    <div class="row">
+      <div>
+        <label for="emp_income">Monthly income</label>
+        <input type="text" id="emp_income" name="emp_income" placeholder="$">
+      </div>
+      <div>
+        <label for="emp_phone">Business phone</label>
+        <input type="tel" id="emp_phone" name="emp_phone">
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="emp_self">Self-employed?</label>
+        <select id="emp_self" name="emp_self">
+          <option value="">Select…</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+      <div>
+        <label for="emp_title">Position / title / type of work</label>
+        <input type="text" id="emp_title" name="emp_title">
+      </div>
+    </div>
+    <label for="co_emp_name">Co-applicant employer (if any)</label>
+    <input type="text" id="co_emp_name" name="co_emp_name">
+    <div class="row">
+      <div>
+        <label for="co_emp_income">Co-applicant monthly income</label>
+        <input type="text" id="co_emp_income" name="co_emp_income" placeholder="$">
+      </div>
+      <div>
+        <label for="co_emp_title">Co-applicant position / title</label>
+        <input type="text" id="co_emp_title" name="co_emp_title">
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>5. Real estate owned</legend>
+    <p class="hint">List properties you own. Use the notes box at the end for any additional properties.</p>
+    <label for="re1_address">Property 1 — Address</label>
+    <input type="text" id="re1_address" name="re1_address">
+    <div class="row">
+      <div>
+        <label for="re1_type">Property 1 — Type</label>
+        <input type="text" id="re1_type" name="re1_type">
+      </div>
+      <div>
+        <label for="re1_value">Property 1 — Current value</label>
+        <input type="text" id="re1_value" name="re1_value" placeholder="$">
+      </div>
+      <div>
+        <label for="re1_mortgage">Property 1 — Existing mortgage</label>
+        <input type="text" id="re1_mortgage" name="re1_mortgage" placeholder="$">
+      </div>
+    </div>
+    <label for="re2_address">Property 2 — Address</label>
+    <input type="text" id="re2_address" name="re2_address">
+    <div class="row">
+      <div>
+        <label for="re2_type">Property 2 — Type</label>
+        <input type="text" id="re2_type" name="re2_type">
+      </div>
+      <div>
+        <label for="re2_value">Property 2 — Current value</label>
+        <input type="text" id="re2_value" name="re2_value" placeholder="$">
+      </div>
+      <div>
+        <label for="re2_mortgage">Property 2 — Existing mortgage</label>
+        <input type="text" id="re2_mortgage" name="re2_mortgage" placeholder="$">
+      </div>
+    </div>
+    <label for="re3_address">Property 3 — Address</label>
+    <input type="text" id="re3_address" name="re3_address">
+    <div class="row">
+      <div>
+        <label for="re3_type">Property 3 — Type</label>
+        <input type="text" id="re3_type" name="re3_type">
+      </div>
+      <div>
+        <label for="re3_value">Property 3 — Current value</label>
+        <input type="text" id="re3_value" name="re3_value" placeholder="$">
+      </div>
+      <div>
+        <label for="re3_mortgage">Property 3 — Existing mortgage</label>
+        <input type="text" id="re3_mortgage" name="re3_mortgage" placeholder="$">
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>6. Express processing information</legend>
+    <label for="settle_name">Settlement agent — Contact name</label>
+    <input type="text" id="settle_name" name="settle_name">
+    <div class="row">
+      <div>
+        <label for="settle_phone">Settlement agent — Phone</label>
+        <input type="tel" id="settle_phone" name="settle_phone">
+      </div>
+      <div>
+        <label for="settle_email">Settlement agent — Email</label>
+        <input type="email" id="settle_email" name="settle_email">
+      </div>
+    </div>
+    <label for="settle_company">Settlement agent — Company name &amp; address</label>
+    <input type="text" id="settle_company" name="settle_company">
+    <label for="ins_name">Insurance agent — Contact name</label>
+    <input type="text" id="ins_name" name="ins_name">
+    <div class="row">
+      <div>
+        <label for="ins_phone">Insurance agent — Phone</label>
+        <input type="tel" id="ins_phone" name="ins_phone">
+      </div>
+      <div>
+        <label for="ins_email">Insurance agent — Email</label>
+        <input type="email" id="ins_email" name="ins_email">
+      </div>
+    </div>
+    <label for="ins_company">Insurance agent — Company name</label>
+    <input type="text" id="ins_company" name="ins_company">
+    <label for="hoa_name">HOA — Contact name</label>
+    <input type="text" id="hoa_name" name="hoa_name">
+    <div class="row">
+      <div>
+        <label for="hoa_phone">HOA — Phone</label>
+        <input type="tel" id="hoa_phone" name="hoa_phone">
+      </div>
+      <div>
+        <label for="hoa_email">HOA — Email</label>
+        <input type="email" id="hoa_email" name="hoa_email">
+      </div>
+    </div>
+    <label for="hoa_company">HOA — Company name</label>
+    <input type="text" id="hoa_company" name="hoa_company">
+  </fieldset>
+
+  <fieldset>
+    <legend>7. Agreement &amp; acknowledgement</legend>
+    <label for="notes">Notes — anything else we should know (additional properties, partners, timing, concerns)</label>
+    <textarea id="notes" name="notes"></textarea>
+    <label class="check">
+      <input type="checkbox" name="consent" value="yes" required>
+      <span>I certify the information in this application is true and correct, and I authorize Makhi Mabogo &amp; Associates to share it with potential lenders to evaluate financing. I understand the lender will collect my full Social Security number securely during processing. *</span>
+    </label>
+  </fieldset>
+
+  <button type="submit">Submit Application</button>
+</form>
+
+<footer>
+  Makhi Mabogo &amp; Associates — Developing land. Protecting legacies.<br>
+  <a href="https://makhimabogo.com">makhimabogo.com</a> &nbsp;|&nbsp; <a href="mailto:info@makhimabogo.com">info@makhimabogo.com</a>
+</footer>
+</div>
+</body>
+</html>
