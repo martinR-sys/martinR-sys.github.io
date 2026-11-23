@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deal Intake | Makhi Mabogo & Associates</title>
+  <meta name="description" content="Start a deal intake with Makhi Mabogo & Associates — project type, budget, and timeline. Commercial capital, consulting, and MgO building systems." />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0a1730" />
+  <style>.form-status{min-height:1.5em;margin-top:.75rem;font-size:.95rem;color:#d9a84e}</style>
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo.png" alt="Makhi Mabogo & Associates Logo" class="brand-logo-img" />
+        <span class="brand-text">MAKHI MABOGO <span class="brand-subtext">& ASSOCIATES</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#pathways">Pick Your Path</a>
+        <a href="index.html#loan-programs">Capital Programs</a>
+        <a href="index.html#sustainable">MgO Systems</a>
+        <a href="index.html" class="btn btn-outline nav-btn">Back to Home</a>
+      </nav>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-title">MENU</div>
+      <a href="index.html#pathways" class="mobile-link">Pick Your Path</a>
+      <a href="index.html#loan-programs" class="mobile-link">Capital Programs</a>
+      <a href="index.html#sustainable" class="mobile-link">MgO Systems</a>
+      <a href="index.html" class="btn btn-gold w-full text-center">Back to Home</a>
+    </div>
+  </header>
+
+  <!-- Deal Intake Section -->
+  <section class="section contact-section" id="deal-intake">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="section-tag">DEAL INTAKE</div>
+          <h2 class="section-title">Tell Us About the Project.</h2>
+          <p class="paragraph">
+            Three answers up front — project type, budget, and timeline — so your deal gets routed to the right place the first time. No back-and-forth, no generic inbox.
+          </p>
+          <p>
+            <a href="tel:+17133251289" class="btn btn-gold">Let's Talk</a>
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="icon-circle">🏦</div>
+              <div>
+                <strong>Commercial Capital</strong>
+                <p>400+ lending partners behind your deal</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="icon-circle">💼</div>
+              <div>
+                <strong>Consulting &amp; Bid Review</strong>
+                <p>Scopes, takeoffs, and feasibility — priced line by line</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="icon-circle">🔥</div>
+              <div>
+                <strong>MgO Boards &amp; Steel Systems</strong>
+                <p>Non-combustible panels and framing, built to last</p>
+              </div>
+            </div>
+          </div>
+          <p class="paragraph" style="margin-top: 1.5rem; font-size: 0.95rem;">
+            Your details go only to our intake team. No names or deal details are ever shared.
+          </p>
+        </div>
+
+        <div class="contact-form-glass">
+          <form id="deal-intake-form" name="deal-intake" method="POST" action="https://formsubmit.co/info@makhimabogo.com">
+            <!-- Hidden inputs for FormSubmit delivery & bot trap -->
+            <input type="hidden" name="_subject" value="New Deal Intake — makhimabogo.com" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <p style="display: none;">
+              <label>Don’t fill this out if you're human: <input type="text" name="_honey" tabindex="-1" autocomplete="off" /></label>
+            </p>
+
+            <h3 class="form-heading">Deal Intake</h3>
+            <div class="form-group">
+              <label for="intake-name">Your Full Name *</label>
+              <input type="text" id="intake-name" name="name" class="form-input" placeholder="e.g. John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="intake-email">Email Address *</label>
+              <input type="email" id="intake-email" name="email" class="form-input" placeholder="john@company.com" required />
+            </div>
+            <div class="form-group">
+              <label for="intake-phone">Phone Number</label>
+              <input type="tel" id="intake-phone" name="phone" class="form-input" placeholder="(555) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="intake-type">Project Type *</label>
+              <select id="intake-type" name="project_type" class="form-input" required>
+                <option value="" selected disabled>Select a project type…</option>
+                <option>Commercial development</option>
+                <option>Multifamily or 4plex</option>
+                <option>Fix-and-flip</option>
+                <option>Ground-up construction</option>
+                <option>Refinance or cash-out</option>
+                <option>MgO boards &amp; materials</option>
+                <option>Consulting, scope, or bid review</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="intake-budget">Budget / Capital Needed *</label>
+              <select id="intake-budget" name="budget" class="form-input" required>
+                <option value="" selected disabled>Select a budget range…</option>
+                <option>Under $100,000</option>
+                <option>$100,000 – $500,000</option>
+                <option>$500,000 – $1M</option>
+                <option>$1M – $5M</option>
+                <option>$5M – $20M</option>
+                <option>$20M+</option>
+                <option>Not sure yet — need guidance</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="intake-timeline">Timeline *</label>
+              <select id="intake-timeline" name="timeline" class="form-input" required>
+                <option value="" selected disabled>When do you need to move?</option>
+                <option>Immediately (0–30 days)</option>
+                <option>1–3 months</option>
+                <option>3–6 months</option>
+                <option>6–12 months</option>
+                <option>12+ months — still exploring</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="intake-location">Property / Project Location</label>
+              <input type="text" id="intake-location" name="location" class="form-input" placeholder="City, State — where is the property or project?" />
+            </div>
+            <div class="form-group">
+              <label for="intake-message">Anything Else We Should Know?</label>
+              <textarea id="intake-message" name="message" class="form-input form-textarea" rows="4" placeholder="Briefly describe the property, its stage, and what you are looking to achieve..."></textarea>
+            </div>
+
+            <!-- Security & Privacy Guarantee -->
+            <div class="form-security-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>256-bit Encrypted & Bot Protected Deal Intake</span>
+            </div>
+
+            <button type="submit" class="btn btn-gold w-full">Submit Deal Intake</button>
+            <div class="form-success-msg" id="form-success">
+              ✅ Thank you! Your intake has been received. Makhi Mabogo will review your deal details and follow up promptly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Makhi Mabogo & Associates" class="footer-logo-img" />
+        <p>Real Estate Development, Consulting & Capital Solutions. 30+ Years of Craftsmanship & Trust.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#pathways">Pick Your Path</a>
+        <a href="index.html#loan-programs">Capital Programs</a>
+        <a href="index.html#sustainable">MgO Systems</a>
+        <a href="loan-application.html">Application</a>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>© 2026 Makhi Mabogo & Associates. All rights reserved. Registered domain: <span class="gold-text">www.makhimabogo.com</span></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
